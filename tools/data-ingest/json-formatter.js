@@ -30,8 +30,7 @@ class JsonFormatter {
 				console.error('Key mapping value should be an array.')
 			}
 		}
-
-		console.log(output)
+		return output
 	}
 }
 
