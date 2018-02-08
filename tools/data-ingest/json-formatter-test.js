@@ -59,6 +59,13 @@ describe('JsonFormatter', function() {
 
 			assert.notExists(output[emptyProperty], 'empty properties in the mapping are not added to the output')
 		})
+
+		it('should convert values to numbers if necessary', function() {
+			const intProperty = testMapping['Kilojules']
+			const output = formatter.format(testInput, testMapping)
+
+			assert.typeOf(output[intProperty[0]][intProperty[1]], 'number', 'the numerical property was converted properly')
+		})
 	})
 	
 })

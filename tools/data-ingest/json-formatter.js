@@ -17,7 +17,11 @@ class JsonFormatter {
 			try {
 				// Library to set an object's property value based on
 				// an array representation of its position.
-				objectPath.set(output, outputKeyArray, jsonObj[key])
+				let value = jsonObj[key]
+
+				value = parseInt(value) || value
+
+				objectPath.set(output, outputKeyArray, value)
 			} catch(e) {
 				console.error(e)
 			}
