@@ -7,6 +7,7 @@ class CsvIngest {
 	}
 
 	ingest(csvPath) {
+		this.results = []
 		return new Promise((resolve, reject) => {
 			try {
 				csv()
