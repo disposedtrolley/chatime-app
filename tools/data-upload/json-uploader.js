@@ -5,13 +5,13 @@ class JsonUploader {
 		this.datastore = null
 	}
 
-	upload(datastore, jsonArray) {
+	insertArray(kind, datastore, jsonArray) {
 		this.datastore = datastore
 		this.jsonArray = jsonArray
 
 		if (this.datastore && this.jsonArray) {
 			for (let jsonObj of this.jsonArray) {
-				insertOne()
+				insertOne(kind, datastore, jsonObj)
 					.then(() => {
 						console.log('MSG: JsonUpload.upload :: inserted one successfully.')
 					})
@@ -21,19 +21,24 @@ class JsonUploader {
 		}
 	}
 
-	insertOne(datastore, jsonObj) {
+	insertOne(kind, datastore, jsonObj) {
+		const key = datastore.key(kind)
+		const entity = {
+			key: key,
+			data: jsonObj
+		}
+
 		return new Promise((resolve, reject) => {
-			datastore.insert(jsonObj)
-				.then(() => {
-					resolve()
-				})
-				.catch(err => {
+			datastore.save(entity, (err, apiRes) => {
+				if (err) {
+					console.error(err)
 					reject(err)
-				})
+				} else {
+					resolve(apiRes)
+				}
+			})
 		})
 	}
-
-
 }
 
-module.exports = JsonUpload
+module.exports = JsonUploader
