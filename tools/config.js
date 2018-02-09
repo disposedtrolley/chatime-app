@@ -23,6 +23,18 @@ module.exports = {
 				'Can add mix-ins': ['canAddCustomMixins'],
 				'Can change ice': ['canModifyBaseMixins', 'ice'],
 				'Can change sugar': ['canModifyBaseMixins', 'sugar']
+			},
+			CATEGORY: {
+				'Category': ['type']
+			},
+			SIZE: {
+				'Size': ['servingSize', 'storeSize']
+			},
+			TYPE: {
+				'Tea type': ['subtype']
+			},
+			FLAVOUR: {
+				'Flavour': ['flavour']
 			}
 		}
 	}
