@@ -9,7 +9,8 @@ class CsvIngest {
 
 	ingest() {
 		return new Promise((resolve, reject) => {
-			csv()
+			try {
+				csv()
 				.fromFile(this.csvPath)
 				.on('json', (jsonObj) => {
 					this.results.push(jsonObj)
@@ -17,6 +18,9 @@ class CsvIngest {
 				.on('done', (error) => {
 					resolve(this.results)
 				})
+			} catch(e) {
+				reject(e)
+			}
 		})
 	}
 }
