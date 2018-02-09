@@ -2,16 +2,15 @@ const csv = require('csvtojson')
 
 class CsvIngest {
 
-	constructor(csvPath) {
-		this.csvPath = csvPath
+	constructor() {
 		this.results = []
 	}
 
-	ingest() {
+	ingest(csvPath) {
 		return new Promise((resolve, reject) => {
 			try {
 				csv()
-				.fromFile(this.csvPath)
+				.fromFile(csvPath)
 				.on('json', (jsonObj) => {
 					this.results.push(jsonObj)
 				})
