@@ -19,11 +19,11 @@ const jsonFormatter = new DataIngest.JsonFormatter()
 const data = {
 	// 'mixin': '../data/tea_data_mixins.csv',
 	// 'product': '../data/tea_data_all.csv',
-	// 'restriction': '../data/tea_data_rules.csv',
+	'restriction': '../data/tea_data_rules.csv',
 	// 'category': '../data/tea_data_category.csv',
 	// 'size': '../data/tea_data_size.csv',
 	// 'type': '../data/tea_data_type.csv',
-	'flavour': '../data/tea_data_flavour.csv'
+	// 'flavour': '../data/tea_data_flavour.csv'
 }
 
 for (let key of Object.keys(data)) {

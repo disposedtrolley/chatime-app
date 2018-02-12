@@ -22,7 +22,8 @@ module.exports = {
 				'Can change size': ['canModifySize'],
 				'Can add mix-ins': ['canAddCustomMixins'],
 				'Can change ice': ['canModifyBaseMixins', 'ice'],
-				'Can change sugar': ['canModifyBaseMixins', 'sugar']
+				'Can change sugar': ['canModifyBaseMixins', 'sugar'],
+				'Can change flavour': ['canModifyFlavour']
 			},
 			CATEGORY: {
 				'Category': ['type']
