@@ -35,7 +35,14 @@ module.exports = {
 				'Tea type': ['subtype']
 			},
 			FLAVOUR: {
-				'Flavour': ['flavour']
+				'Flavour': ['flavour'],
+				'Milky': ['appliesTo', 'type', 'Milky'],
+				'Hot Milky': ['appliesTo', 'type', 'Hot Milky'],
+				'Fresh': ['appliesTo', 'type', 'Fresh'],
+				'Hot Fresh': ['appliesTo', 'type', 'Hot Fresh'],
+				'Fruity': ['appliesTo', 'type', 'Fruity'],
+				'Frozen': ['appliesTo', 'type', 'Frozen'],
+				'Sparkling': ['appliesTo', 'type', 'Sparkling']
 			}
 		}
 	}
