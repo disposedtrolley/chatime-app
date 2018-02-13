@@ -18,12 +18,12 @@ module.exports = {
 			},
 			RESTRICTION: {
 				'Category': ['type'],
-				'Can change tea type': ['canModifySubtype'],
-				'Can change size': ['canModifySize'],
-				'Can add mix-ins': ['canAddCustomMixins'],
-				'Can change ice': ['canModifyBaseMixins', 'ice'],
-				'Can change sugar': ['canModifyBaseMixins', 'sugar'],
-				'Can change flavour': ['canModifyFlavour']
+				'Can change tea type': ['canModify', 'type'],
+				'Can change size': ['canModify', 'servingSize', 'storeSize'],
+				'Can add mix-ins': ['canModify', 'customMixins'],
+				'Can change ice': ['canModify', 'baseMixins' , 'ice'],
+				'Can change sugar': ['canModify', 'baseMixins', 'sugar'],
+				'Can change flavour': ['canModify', 'flavour']
 			},
 			CATEGORY: {
 				'Category': ['type']
