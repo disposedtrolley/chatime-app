@@ -20,9 +20,9 @@ module.exports = {
 				'Category': ['type'],
 				'Can change tea type': ['canModify', 'type'],
 				'Can change size': ['canModify', 'servingSize', 'storeSize'],
-				'Can add mix-ins': ['canModify', 'customMixins'],
-				'Can change ice': ['canModify', 'baseMixins' , 'ice'],
-				'Can change sugar': ['canModify', 'baseMixins', 'sugar'],
+				'Can add mix-ins': ['canModify', 'customMixin'],
+				'Can change ice': ['canModify', 'baseMixin' , 'ice'],
+				'Can change sugar': ['canModify', 'baseMixin', 'sugar'],
 				'Can change flavour': ['canModify', 'flavour']
 			},
 			CATEGORY: {
